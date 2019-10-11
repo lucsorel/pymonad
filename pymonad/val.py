@@ -16,6 +16,9 @@ class Val:
     def orElseCall(self, alternate=Callable):
         raise NotImplementedError()
 
+    def orElseFlatCall(self, alternate=Callable):
+        raise NotImplementedError()
+
     def isNothing(self):
         raise NotImplementedError()
 
@@ -60,6 +63,9 @@ class Some(Val):
     def orElseCall(self, alternate=Callable) -> Val:
         return self
 
+    def orElseFlatCall(self, alternate=Callable) -> Val:
+        return self
+
     def isNothing(self):
         return False
 
@@ -81,6 +87,9 @@ class Nothing(Val):
 
     def orElseCall(self, alternate=Callable) -> Val:
         return Val.of(alternate())
+
+    def orElseFlatCall(self, alternate=Callable) -> Val:
+        return alternate()
 
     def isNothing(self):
         return True
