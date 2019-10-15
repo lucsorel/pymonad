@@ -8,7 +8,8 @@ Install from the github repository:
 * with [pipenv](https://pipenv.readthedocs.io/en/latest/):
 
 ```sh
-pipenv install git+https://github.com/lucsorel/pymonad.git#egg=pymonad
+# should be installed in editable mode to ensure an up-to-date copy of the repository and that it includes all known dependencies -> '-e'
+pipenv install -e git+https://github.com/lucsorel/pymonad.git#egg=pymonad
 ```
 
 * with `pip`:
