@@ -6,7 +6,7 @@ with open('README.md', 'r') as fh:
     longDescription = fh.read()
 
 setuptools.setup(name='pymonad',
-    version='0.1.0',
+    version='0.1.1',
     description='Some monadic value holders for Python',
     long_description=longDescription,
     long_description_content_type='text/markdown',
